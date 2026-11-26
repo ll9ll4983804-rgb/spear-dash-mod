@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "speardash",
+  "version": "${version}",
+  "name": "Spear Dash",
+  "description": "Fast hotbar swap and attack cycle between an empty slot and spear.",
+  "authors": [
+    "Ayman"
+  ],
+  "license": "MIT",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "com.ayman.speardash.SpearDashMod"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.16.9",
+    "java": ">=21"
+  }
+}
