@@ -2,7 +2,9 @@ name: Build Mod
 
 on:
   push:
-    branches: [ "**" ]
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
   workflow_dispatch:
 
 jobs:
@@ -21,6 +23,8 @@ jobs:
 
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.14.3'
 
       - name: Build with Gradle
         run: gradle build --no-daemon
@@ -30,9 +34,3 @@ jobs:
         with:
           name: spear-dash-jar
           path: build/libs/*.jar
-          
-- name: Setup Gradle
-  uses: gradle/actions/setup-gradle@v4
-  with:
-    gradle-version: '8.14.3'
-    
