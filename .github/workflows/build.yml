@@ -31,3 +31,8 @@ jobs:
           name: spear-dash-jar
           path: build/libs/*.jar
           
+- name: Setup Gradle
+  uses: gradle/actions/setup-gradle@v4
+  with:
+    gradle-version: '8.14.3'
+    
